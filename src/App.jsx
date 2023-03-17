@@ -1,14 +1,30 @@
+import { Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import CategoriesPage from "./pages/CategoriesPage";
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import CartPage from "./pages/CartPage";
 
 function App() {
-  //function to change classname from "light-mode" to "dark-mode" for element with id "root"
   const changeMode = () => {
     const root = document.getElementById("root");
     root.className =
       root.className === "light-mode" ? "dark-mode" : "light-mode";
   };
 
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

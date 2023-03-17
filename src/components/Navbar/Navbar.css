@@ -1,0 +1,29 @@
+.navbar-logo-container {
+  height: clamp(3rem, 10vw, 4rem);
+  aspect-ratio: 1/1;
+}
+.navbar {
+  padding: 1rem 10vw;
+}
+.navbar-links {
+  gap: clamp(1rem, 5vw, 2rem);
+  color: var(--color);
+}
+
+.light-mode {
+  --nav-items-color: black;
+}
+.dark-mode {
+  --nav-items-color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 0.5rem;
+  }
+}
