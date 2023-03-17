@@ -1,10 +1,12 @@
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import CategoriesPage from "./pages/CategoriesPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import CartPage from "./pages/CartPage";
+import SideNavbar from "./components/Navbar/SideNavbar";
+import { SideNavbarProvider } from "./contexts/SideNavbarContext";
 
 function App() {
   const changeMode = () => {
@@ -15,7 +17,10 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <SideNavbarProvider>
+        <Navbar />
+        <SideNavbar />
+      </SideNavbarProvider>
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/" element={<HomePage />} />

@@ -7,11 +7,13 @@ body {
   height: 100svh;
   height: 100dvh;
   width: 100%;
+  --section-padding-x: min(144px, 10vw);
 
   font-family: "Blinker", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   max-width: 1536px;
+  overflow-x: hidden;
   background-color: var(--background-color);
 }
 .light-mode {
@@ -19,4 +21,15 @@ body {
 }
 .dark-mode {
   --background-color: rgb(15, 23, 42);
+}
+
+@media (max-width: 768px) {
+  #root {
+    --section-padding-x: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  #root {
+    --section-padding-x: 0.5rem;
+  }
 }

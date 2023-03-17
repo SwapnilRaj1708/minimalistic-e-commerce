@@ -3,7 +3,10 @@
   aspect-ratio: 1/1;
 }
 .navbar {
-  padding: 1rem 10vw;
+  padding: 1rem var(--section-padding-x);
+  position: fixed;
+  width: 100%;
+  max-width: 1536px;
 }
 .navbar-links {
   gap: clamp(1rem, 5vw, 2rem);
@@ -16,14 +19,27 @@
 .dark-mode {
   --nav-items-color: white;
 }
+.side-navbar-btn {
+  display: none;
+  font-size: xx-large;
+}
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 2rem;
+    padding: 1rem var(--section-padding-x);
   }
 }
 @media (max-width: 480px) {
   .navbar {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem var(--section-padding-x);
+  }
+  .display-none {
+    display: none;
+  }
+  .side-navbar-btn {
+    display: block;
+  }
+  .larger-nav-items {
+    font-size: 1.5rem;
   }
 }

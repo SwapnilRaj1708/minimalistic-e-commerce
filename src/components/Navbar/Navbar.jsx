@@ -4,8 +4,15 @@ import { FaShoppingCart } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import { BiMenuAltRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import NavItem from "./NavItem";
+import useSideNavbar from "../../hooks/use-sideNavbar";
 
 export default function Navbar() {
+  const { displaySideNavbar, setDisplaySideNavbar } = useSideNavbar();
+  function toggleSideNavbar() {
+    setDisplaySideNavbar(!displaySideNavbar);
+  }
+
   return (
     <div className="navbar bg-gray-200 ">
       <div className="flex flex-row items-center justify-between">
@@ -15,12 +22,21 @@ export default function Navbar() {
           </div>
         </Link>
         <div className="navbar-links flex flex-row items-center">
-          <Link to="/categories">CATEGORIES</Link>
-          <Link to="/products">PRODUCTS</Link>
-          <Link to="/cart">
+          <NavItem className="display-none" to="/categories">
+            CATEGORIES
+          </NavItem>
+          <NavItem className="display-none" to="/products">
+            PRODUCTS
+          </NavItem>
+          <NavItem className="larger-nav-items" to="/cart">
             <FaShoppingCart />
-          </Link>
-          <BiMenuAltRight />
+          </NavItem>
+          <div
+            onClick={toggleSideNavbar}
+            className="side-navbar-btn cursor-pointer"
+          >
+            <BiMenuAltRight />
+          </div>
         </div>
       </div>
     </div>
