@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+  background-color: var(--background-color);
+}
+.light-mode {
+  --background-color: white;
+
+
+  
+}
+/* .dark-mode {
+  --background-color: #000;
+} */
