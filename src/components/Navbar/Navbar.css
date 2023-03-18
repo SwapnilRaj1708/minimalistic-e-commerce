@@ -1,6 +1,10 @@
 .navbar-logo-container {
   height: clamp(3rem, 10vw, 4rem);
-  aspect-ratio: 1/1;
+}
+.navbar-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .navbar {
   padding: 1rem var(--section-padding-x);

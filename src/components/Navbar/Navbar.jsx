@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="flex flex-row items-center justify-between">
         <Link to="/">
           <div className="navbar-logo-container cursor-pointer flex justify-center items-center">
-            <img className="navbar-logo h-auto" src={logo} alt="logo" />
+            <img className="navbar-logo" src={logo} alt="logo" />
           </div>
         </Link>
         <div className="navbar-links flex flex-row items-center">
