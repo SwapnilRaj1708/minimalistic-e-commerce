@@ -1,0 +1,42 @@
+.trending-products {
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: hidden;
+  width: 100%;
+}
+.trending-product {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 15rem;
+}
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 768px) {
+  .trending-products {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .arrow-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
