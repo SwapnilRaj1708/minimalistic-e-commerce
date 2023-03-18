@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function NavItem({ children, className, to }) {
+export default function NavItem({ toggleSideNavbar, children, className, to }) {
   return (
-    <Link className={className} to={to}>
+    <Link onClick={toggleSideNavbar} className={className} to={to}>
       {children}
     </Link>
   );
