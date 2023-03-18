@@ -20,7 +20,6 @@ export default function MostSoldProducts() {
   ));
 
   return (
-    //remove padding later
     <div className="section-container">
       <h1 className="section-heading most-sold-heading ">Most Sold Products</h1>
       <div className="most-sold-products mt-">{mostPopularProducts}</div>

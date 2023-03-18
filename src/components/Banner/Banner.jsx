@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Banner.css";
-import banner1 from "../../assets/img/banner/banner1.jpg";
-import banner2 from "../../assets/img/banner/banner2.jpg";
 
-export default function Banner() {
+export default function Banner({ image, title, description, button }) {
   const [isBanner, setIsBanner] = useState(false);
 
   let width = window.innerWidth;
@@ -16,21 +14,18 @@ export default function Banner() {
   return (
     <div className="banner-container">
       <div
-        style={isBanner ? { backgroundImage: `url(${banner1})` } : {}}
+        style={isBanner ? { backgroundImage: `url(${image})` } : {}}
         className="  flex flex-col justify-center items-start gap-2"
       >
         <div className="banner-grid-item-1 banner-content-container">
-          <p className="banner-title">Creative harmonious living</p>
-          <span>
-            RAOUF Products are all made to standard sizes so that you can mix
-            and match them freely.
-          </span>
-          <button className="banner-btn font-semibold">SHOP NOW</button>
+          <p className="banner-title">{title}</p>
+          <span>{description}</span>
+          <button className="banner-btn font-semibold">{button}</button>
         </div>
       </div>
       <div
         style={{
-          backgroundImage: `url(${banner1})`,
+          backgroundImage: `url(${image})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

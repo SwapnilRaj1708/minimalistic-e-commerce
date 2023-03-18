@@ -8,6 +8,7 @@ import CartPage from "./pages/CartPage";
 import SideNavbar from "./components/Navbar/SideNavbar";
 import { SideNavbarProvider } from "./contexts/SideNavbarContext";
 import { ProductsProvider } from "./contexts/ProductsContext";
+import { BannerContextProvider } from "./contexts/BannerContext";
 
 function App() {
   const changeMode = () => {
@@ -23,15 +24,17 @@ function App() {
         <SideNavbar />
       </SideNavbarProvider>
       <ProductsProvider>
-        <div className="main">
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="/categories" element={<CategoriesPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-        </div>
+        <BannerContextProvider>
+          <div className="main">
+            <Routes>
+              <Route index element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/categories" element={<CategoriesPage />} />
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+          </div>
+        </BannerContextProvider>
       </ProductsProvider>
     </>
   );
