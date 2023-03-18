@@ -22,7 +22,11 @@ body {
 .dark-mode {
   --background-color: rgb(15, 23, 42);
 }
-
+.main {
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+  padding-top: calc(clamp(3rem, 10vw, 4rem) + 2.75rem);
+}
 @media (max-width: 768px) {
   #root {
     --section-padding-x: 2rem;
@@ -31,5 +35,8 @@ body {
 @media (max-width: 480px) {
   #root {
     --section-padding-x: 0.5rem;
+  }
+  .main {
+    padding-top: calc(clamp(3rem, 10vw, 4rem) + 1.5rem);
   }
 }

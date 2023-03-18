@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const SideNavbarContext = createContext();
 
 function SideNavbarProvider({ children }) {
-  const [displaySideNavbar, setDisplaySideNavbar] = useState(false);
+  const [displaySideNavbar, setDisplaySideNavbar] = useState(true);
 
   return (
     <SideNavbarContext.Provider

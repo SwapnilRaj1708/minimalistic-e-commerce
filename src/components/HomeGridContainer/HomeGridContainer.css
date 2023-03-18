@@ -1,0 +1,15 @@
+.home-grid-container {
+  aspect-ratio: 4/2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .home-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    aspect-ratio: 1/1;
+  }
+}

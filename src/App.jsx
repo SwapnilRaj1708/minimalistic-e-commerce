@@ -21,13 +21,15 @@ function App() {
         <Navbar />
         <SideNavbar />
       </SideNavbarProvider>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/categories" element={<CategoriesPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Routes>
+      <div className="main">
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </div>
     </>
   );
 }
