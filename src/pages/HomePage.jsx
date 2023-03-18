@@ -9,8 +9,9 @@ export default function HomePage() {
     <>
       <HomeGridContainer />
       <MostSoldProducts />
-      <BannerContainer />
+      <BannerContainer number={0} />
       <Trending />
+      <BannerContainer number={1} />
     </>
   );
 }

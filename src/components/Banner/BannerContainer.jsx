@@ -4,17 +4,17 @@ import BannerContext from "../../contexts/BannerContext";
 import Banner from "./Banner";
 import "./BannerContainer.css";
 
-export default function BannerContainer() {
+export default function BannerContainer({ number }) {
   const { banner } = useContext(BannerContext);
 
   return (
     <>
       <div className="section-container">
         <Banner
-          image={banner[0].image}
-          title={banner[0].title}
-          description={banner[0].description}
-          button={banner[0].button}
+          image={banner[number].image}
+          title={banner[number].title}
+          description={banner[number].description}
+          button={banner[number].button}
         />
       </div>
     </>
