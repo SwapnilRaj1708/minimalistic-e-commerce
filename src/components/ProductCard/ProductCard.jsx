@@ -12,7 +12,7 @@ export default function ProductCard({
   return (
     <Link key={id} to={`/product/${id}`}>
       <div
-        className={`product cursor-pointer border p-1 flex flex-col gap-4 ${classname}`}
+        className={`product cursor-pointer p-1 flex flex-col gap-4 ${classname}`}
       >
         <div className="product-image-container">
           <img className="product-image" src={image} alt="product" />

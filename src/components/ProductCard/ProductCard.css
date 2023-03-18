@@ -1,5 +1,9 @@
 .product {
+  transition: all 0.1s ease-in-out;
   border: 2px solid #ccc;
+}
+.product:hover {
+  border: 2px solid #1b1b1b;
 }
 .product-image-container {
   aspect-ratio: 1/1;
