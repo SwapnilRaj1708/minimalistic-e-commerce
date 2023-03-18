@@ -1,0 +1,93 @@
+.banner-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.banner {
+  height: 23.5rem;
+}
+.banner-grid-item-1 {
+  grid-column: 1/2;
+  background-color: rgb(233, 233, 233);
+  padding: 0 5rem;
+}
+.banner-grid-item-2 {
+  grid-column: 2/3;
+}
+.banner-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.banner-btn {
+  background-color: var(--banner-btn-bg-color);
+  color: var(--banner-btn-text-color);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.light-mode {
+  --banner-btn-bg-color: rgb(0, 0, 0);
+  --banner-btn-text-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .banner-grid-item-1 {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-grid-item-1 {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner-container {
+    grid-template-columns: 1fr;
+  }
+  .banner-grid-item-1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    padding: 5rem 5rem;
+  }
+  .banner-grid-item-2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-grid-item-1 {
+    padding: 5rem 2rem;
+  }
+}
+
+.banner-content-container {
+  color: black;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+@media screen and (max-width: 700px) {
+  .banner-title {
+    color: white;
+  }
+
+  .banner-content-container {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
