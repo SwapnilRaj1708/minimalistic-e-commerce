@@ -23,10 +23,10 @@ export default function SideNavbar() {
             <GrClose />
           </div>
           <div className="flex flex-col gap-2">
-            <NavItem className="text-3xl text-center" to="/categories">
+            <NavItem className="side-navbar-links text-center" to="/categories">
               CATEGORIES
             </NavItem>
-            <NavItem className="text-3xl text-center" to="/products">
+            <NavItem className="side-navbar-links text-center" to="/products">
               PRODUCTS
             </NavItem>
           </div>

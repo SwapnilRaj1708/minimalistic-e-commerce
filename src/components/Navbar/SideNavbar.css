@@ -8,10 +8,11 @@
   display: none;
   right: 0;
   overflow: hidden;
-  /* filter: blur(5px); */
-  /* blur effect for background */
-  /* background-color: rgba(0, 0, 0, 0.5); */
   backdrop-filter: blur(15px);
+}
+.side-navbar-links {
+  font-size: 2.3rem;
+  font-weight: 400;
 }
 .hide-side-navbar {
   width: 0;
