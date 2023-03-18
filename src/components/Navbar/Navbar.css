@@ -11,6 +11,7 @@
   position: fixed;
   width: 100%;
   max-width: 1536px;
+  background-color: var(--background-color);
 }
 .navbar-links {
   gap: clamp(1rem, 5vw, 2rem);

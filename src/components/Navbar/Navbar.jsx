@@ -14,7 +14,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="navbar bg-gray-200 ">
+    <div className="navbar shadow">
       <div className="flex flex-row items-center justify-between">
         <Link to="/">
           <div className="navbar-logo-container cursor-pointer flex justify-center items-center">
