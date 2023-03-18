@@ -9,6 +9,7 @@ import SideNavbar from "./components/Navbar/SideNavbar";
 import { SideNavbarProvider } from "./contexts/SideNavbarContext";
 import { ProductsProvider } from "./contexts/ProductsContext";
 import { BannerContextProvider } from "./contexts/BannerContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const changeMode = () => {
@@ -36,6 +37,7 @@ function App() {
           </div>
         </BannerContextProvider>
       </ProductsProvider>
+      <Footer />
     </>
   );
 }

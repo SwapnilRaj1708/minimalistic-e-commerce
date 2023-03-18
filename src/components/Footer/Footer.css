@@ -1,0 +1,10 @@
+.footer-container{
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+    background-color: black;
+    color: white;
+    font-size: smaller;
+}
+.footer-social{
+    font-size: larger;
+}

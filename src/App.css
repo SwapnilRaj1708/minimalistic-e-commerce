@@ -26,6 +26,7 @@ body {
   padding-left: var(--section-padding-x);
   padding-right: var(--section-padding-x);
   padding-top: calc(clamp(3rem, 10vw, 4rem) + 2.75rem);
+  padding-bottom: calc(clamp(3rem, 10vw, 4rem) + 2.75rem);
   display: flex;
   flex-direction: column;
   gap: 5rem;
