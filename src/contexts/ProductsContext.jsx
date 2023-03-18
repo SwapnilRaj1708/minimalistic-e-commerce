@@ -60,9 +60,9 @@ import Product20_1 from "../assets/img/products/20r.jpg";
 import Product20_2 from "../assets/img/products/otherProducts/bodyoil1.jpg";
 import Product20_3 from "../assets/img/products/otherProducts/bodyoil2.jpg";
 
-export const ProductsContext = createContext();
+const ProductsContext = createContext();
 
-function ProductsContext({ children }) {
+function ProductsProvider({ children }) {
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -76,6 +76,8 @@ function ProductsContext({ children }) {
       texture: "Sheep Skin",
       weight: "15 kg",
       size: "150cm x 70cm",
+      isMostPopular: true,
+      isTrendingNow: false,
     },
     {
       id: 2,
@@ -89,6 +91,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "3.5 kg",
       size: "20cm x 10cm",
+      isMostPopular: true,
+      isTrendingNow: true,
     },
     {
       id: 3,
@@ -102,6 +106,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "2 kg",
       size: "15cm x 15cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 4,
@@ -115,6 +121,8 @@ function ProductsContext({ children }) {
       texture: "Wood",
       weight: "45 kg",
       size: "250cm x 60cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 5,
@@ -128,6 +136,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "3 kg",
       size: "20cm x 20cm",
+      isMostPopular: false,
+      isTrendingNow: true,
     },
     {
       id: 6,
@@ -141,6 +151,8 @@ function ProductsContext({ children }) {
       texture: "Liquid",
       weight: "200 ml",
       size: "10cm x 5cm",
+      isMostPopular: true,
+      isTrendingNow: false,
     },
     {
       id: 7,
@@ -155,6 +167,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "6 kg",
       size: "20cm x 20cm",
+      isMostPopular: false,
+      isTrendingNow: true,
     },
     {
       id: 8,
@@ -168,6 +182,8 @@ function ProductsContext({ children }) {
       texture: "Wood",
       weight: "10 kg",
       size: "60cm x 20cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 9,
@@ -181,6 +197,8 @@ function ProductsContext({ children }) {
       texture: "Ceramic",
       weight: "2 kg",
       size: "45cm x 15cm",
+      isMostPopular: true,
+      isTrendingNow: true,
     },
     {
       id: 10,
@@ -194,6 +212,8 @@ function ProductsContext({ children }) {
       texture: "Wood",
       weight: "2.5 kg",
       size: "60cm x 40cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 11,
@@ -207,6 +227,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "3 kg",
       size: "20cm x 20cm",
+      isMostPopular: true,
+      isTrendingNow: true,
     },
     {
       id: 12,
@@ -220,6 +242,8 @@ function ProductsContext({ children }) {
       texture: "Plastic",
       weight: "3 kg",
       size: "15cm x 15cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 13,
@@ -233,6 +257,8 @@ function ProductsContext({ children }) {
       texture: "Cotton",
       weight: "100 g",
       size: "10cm x 10cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 14,
@@ -246,6 +272,8 @@ function ProductsContext({ children }) {
       texture: "Wood",
       weight: "3 kg",
       size: "60cm x 60cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 15,
@@ -259,6 +287,8 @@ function ProductsContext({ children }) {
       texture: "Wood",
       weight: "3 kg",
       size: "60cm x 40cm",
+      isMostPopular: false,
+      isTrendingNow: true,
     },
     {
       id: 16,
@@ -272,6 +302,8 @@ function ProductsContext({ children }) {
       texture: "Metal",
       weight: "1 kg",
       size: "15cm x 10cm",
+      isMostPopular: true,
+      isTrendingNow: true,
     },
     {
       id: 17,
@@ -285,6 +317,8 @@ function ProductsContext({ children }) {
       texture: "Metal",
       weight: "1 kg",
       size: "120cm x 40cm",
+      isMostPopular: false,
+      isTrendingNow: false,
     },
     {
       id: 18,
@@ -298,6 +332,8 @@ function ProductsContext({ children }) {
       texture: "Metal",
       weight: "1 kg",
       size: "15cm x 10cm",
+      isMostPopular: true,
+      isTrendingNow: false,
     },
     {
       id: 19,
@@ -311,6 +347,8 @@ function ProductsContext({ children }) {
       texture: "Comfy Chair",
       weight: "3 kg",
       size: "60cm x 40cm",
+      isMostPopular: true,
+      isTrendingNow: false,
     },
     {
       id: 20,
@@ -324,6 +362,8 @@ function ProductsContext({ children }) {
       texture: "Liquid",
       weight: "50 ml",
       size: "10cm x 5cm",
+      isMostPopular: false,
+      isTrendingNow: true,
     },
   ]);
 
