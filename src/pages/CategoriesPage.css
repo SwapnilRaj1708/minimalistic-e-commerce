@@ -14,3 +14,19 @@
     overflow-x: scroll;
   }
 }
+.categories-title {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.category-chips-container {
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .category-chips-container {
+    justify-content: start;
+    overflow-x: scroll;
+  }
+}

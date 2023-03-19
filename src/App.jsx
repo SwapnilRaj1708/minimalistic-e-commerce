@@ -37,7 +37,7 @@ function App() {
                   <Route index element={<CategorisedProducts />} />
                   <Route path=":id" element={<CategorisedProducts />} />
                 </Route>
-                <Route path="/products" element={<ProductsPage />} />
+                <Route path="/product/:id" element={<ProductsPage />} />
                 <Route path="/cart" element={<CartPage />} />
               </Routes>
             </div>

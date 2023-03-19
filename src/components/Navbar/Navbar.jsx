@@ -25,7 +25,7 @@ export default function Navbar() {
           <NavItem className="display-none" to="/categories/all">
             CATEGORIES
           </NavItem>
-          <NavItem className="display-none" to="/products">
+          <NavItem className="display-none" to="/product/1">
             PRODUCTS
           </NavItem>
           <NavItem className="larger-nav-items" to="/cart">

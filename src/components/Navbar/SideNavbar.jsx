@@ -33,7 +33,7 @@ export default function SideNavbar() {
             <NavItem
               toggleSideNavbar={toggleSideNavbar}
               className="side-navbar-links text-center"
-              to="/products"
+              to="/product/1"
             >
               PRODUCTS
             </NavItem>
