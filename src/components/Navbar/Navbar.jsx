@@ -22,7 +22,7 @@ export default function Navbar() {
           </div>
         </Link>
         <div className="navbar-links flex flex-row items-center">
-          <NavItem className="display-none" to="/categories">
+          <NavItem className="display-none" to="/categories/all">
             CATEGORIES
           </NavItem>
           <NavItem className="display-none" to="/products">

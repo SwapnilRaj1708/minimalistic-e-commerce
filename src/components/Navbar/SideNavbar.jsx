@@ -26,7 +26,7 @@ export default function SideNavbar() {
             <NavItem
               toggleSideNavbar={toggleSideNavbar}
               className="side-navbar-links text-center"
-              to="/categories"
+              to="/categories/all"
             >
               CATEGORIES
             </NavItem>

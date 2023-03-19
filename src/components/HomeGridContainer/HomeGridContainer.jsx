@@ -17,7 +17,7 @@ export default function HomeGridContainer() {
       />
       <HomeGridItem
         itemNumber={2}
-        to="/categories/skin-care"
+        to="/categories/skincare"
         imageSource={homeImage2}
         title="Skin Care"
       />

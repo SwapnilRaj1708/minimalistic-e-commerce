@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-links flex flex-row justify-center items-center gap-4 flex-wrap">
         <p>About</p>
         <p>Store</p>
-        <p>locator</p>
+        <p>Locator</p>
         <p>FAQs</p>
         <p>News</p>
         <p>Careers</p>

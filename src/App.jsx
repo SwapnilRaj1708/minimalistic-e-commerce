@@ -10,6 +10,8 @@ import { SideNavbarProvider } from "./contexts/SideNavbarContext";
 import { ProductsProvider } from "./contexts/ProductsContext";
 import { BannerContextProvider } from "./contexts/BannerContext";
 import Footer from "./components/Footer/Footer";
+import { CategoryContextProvider } from "./contexts/CategoryContext";
+import CategorisedProducts from "./components/CategoriedProducts/CategorisedProducts";
 
 function App() {
   const changeMode = () => {
@@ -26,15 +28,20 @@ function App() {
       </SideNavbarProvider>
       <ProductsProvider>
         <BannerContextProvider>
-          <div className="main">
-            <Routes>
-              <Route index element={<HomePage />} />
-              <Route path="/" element={<HomePage />} />
-              <Route path="/categories" element={<CategoriesPage />} />
-              <Route path="/products" element={<ProductsPage />} />
-              <Route path="/cart" element={<CartPage />} />
-            </Routes>
-          </div>
+          <CategoryContextProvider>
+            <div className="main">
+              <Routes>
+                <Route index element={<HomePage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/categories" element={<CategoriesPage />}>
+                  <Route index element={<CategorisedProducts />} />
+                  <Route path=":id" element={<CategorisedProducts />} />
+                </Route>
+                <Route path="/products" element={<ProductsPage />} />
+                <Route path="/cart" element={<CartPage />} />
+              </Routes>
+            </div>
+          </CategoryContextProvider>
         </BannerContextProvider>
       </ProductsProvider>
       <Footer />

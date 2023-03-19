@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
-export default function ProductCard({
-  classname,
-  productName,
-  productPrice,
-  id,
-  image,
-}) {
+export default function ProductCard({ classname, name, price, id, image }) {
   return (
     <Link key={id} to={`/product/${id}`}>
       <div
@@ -19,9 +13,9 @@ export default function ProductCard({
         </div>
         <div className="product-info">
           <div className="product-name-container">
-            <p className="product-name p-1">{productName}</p>
+            <p className="product-name p-1">{name}</p>
           </div>
-          <p className="product-price p-1">₹{productPrice}</p>
+          <p className="product-price p-1">₹{price}</p>
         </div>
       </div>
     </Link>

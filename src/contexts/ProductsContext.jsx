@@ -67,7 +67,7 @@ function ProductsProvider({ children }) {
     {
       id: 1,
       name: "Little Armchair Sheepskin",
-      category: "Furniture",
+      category: "Chairs",
       price: 3500,
       image: Product1_1,
       otherImages: [Product1_2, Product1_3],
@@ -142,7 +142,7 @@ function ProductsProvider({ children }) {
     {
       id: 6,
       name: "Body Oil 200ml",
-      category: "Body Care",
+      category: "Skin Care",
       price: 500,
       image: Product6_1,
       otherImages: [Product6_2, Product6_3],
@@ -203,7 +203,7 @@ function ProductsProvider({ children }) {
     {
       id: 10,
       name: "Traditional Armchair",
-      category: "Furniture",
+      category: "Chairs",
       price: 600,
       image: Product10_1,
       otherImages: [Product10_2, Product10_3],
@@ -248,7 +248,7 @@ function ProductsProvider({ children }) {
     {
       id: 13,
       name: "Unbleached Cotton Pads",
-      category: "Body Care",
+      category: "Skin Care",
       price: 100,
       image: Product13_1,
       otherImages: [Product13_2, Product13_3],
@@ -263,7 +263,7 @@ function ProductsProvider({ children }) {
     {
       id: 14,
       name: "Oak Spanish Chair",
-      category: "Furniture",
+      category: "Chairs",
       price: 1200,
       image: Product14_1,
       otherImages: [Product14_2, Product14_3],
@@ -278,7 +278,7 @@ function ProductsProvider({ children }) {
     {
       id: 15,
       name: "Copenhagen Armchair",
-      category: "Furniture",
+      category: "Chairs",
       price: 1200,
       image: Product15_1,
       otherImages: [Product15_2, Product15_3],
@@ -293,7 +293,7 @@ function ProductsProvider({ children }) {
     {
       id: 16,
       name: "Anti Dark Light",
-      category: "Lamps",
+      category: "Electronics",
       price: 500,
       image: Product16_1,
       otherImages: [Product16_2, Product16_3],
@@ -338,7 +338,7 @@ function ProductsProvider({ children }) {
     {
       id: 19,
       name: "Comfy Chair",
-      category: "Furniture",
+      category: "Chairs",
       price: 2500,
       image: Product19_1,
       otherImages: [Product19_2, Product19_3],
@@ -353,7 +353,7 @@ function ProductsProvider({ children }) {
     {
       id: 20,
       name: "Body Oil 50ml",
-      category: "Body Care",
+      category: "Skin Care",
       price: 100,
       image: Product20_1,
       otherImages: [Product20_2, Product20_3],

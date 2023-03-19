@@ -1,0 +1,22 @@
+.category-chip {
+  background-color: white;
+  color: black;
+  border: 2px solid #e0e0e0;
+  padding: 0.1rem 1rem;
+  transition: all 0.2s ease-in-out;
+  font-size: smaller;
+  width: max-content;
+  /* scrollbar-gutter: ; */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.category-chip::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+}
+.category-chip:hover {
+  border: 2px solid black;
+}

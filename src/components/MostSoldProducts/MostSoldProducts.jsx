@@ -15,8 +15,8 @@ export default function MostSoldProducts() {
       classname="most-sold-product"
       key={product.id}
       id={product.id}
-      productName={product.name}
-      productPrice={product.price}
+      name={product.name}
+      price={product.price}
       image={product.image}
     />
   ));
