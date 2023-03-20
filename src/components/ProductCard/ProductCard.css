@@ -5,7 +5,7 @@
 .product:hover {
   border: 2px solid #1b1b1b;
 }
-.product-image-container {
+.product-card-image-container {
   aspect-ratio: 1/1;
   overflow: hidden;
   object-fit: cover;

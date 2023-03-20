@@ -9,8 +9,6 @@ export default function Trending() {
 
   const trendingProducts = products.filter((product) => product.isTrendingNow);
 
-  console.log(trendingProducts);
-
   const renderedTrendingProducts = trendingProducts.map((product) => (
     <ProductCard
       classname="trending-product"

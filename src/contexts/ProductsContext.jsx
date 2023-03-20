@@ -56,7 +56,7 @@ import Product18_3 from "../assets/img/products/otherProducts/mat2.webp";
 import Product19_1 from "../assets/img/products/19.jpg";
 import Product19_2 from "../assets/img/products/otherProducts/comfy1.webp";
 import Product19_3 from "../assets/img/products/otherProducts/comfy2.webp";
-import Product20_1 from "../assets/img/products/20r.jpg";
+import Product20_1 from "../assets/img/products/20.jpg";
 import Product20_2 from "../assets/img/products/otherProducts/bodyoil1.jpg";
 import Product20_3 from "../assets/img/products/otherProducts/bodyoil2.jpg";
 
