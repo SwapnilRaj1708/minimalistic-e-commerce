@@ -13,6 +13,7 @@ function BannerContextProvider({ children }) {
         "RAOUF Products are all made to standard sizes so that you can mix and match them freely.",
       image: banner1,
       button: "SHOP NOW",
+      to: "categories/furniture",
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ function BannerContextProvider({ children }) {
         "RAOUF Products are all made to standard sizes so that you can mix and match them freely.",
       image: banner2,
       button: "SHOP NOW",
+      to: "categories/lamps",
     },
   ]);
 

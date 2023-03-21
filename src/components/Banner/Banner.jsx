@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./Banner.css";
 
-export default function Banner({ image, title, description, button }) {
+export default function Banner({ image, title, description, button, to }) {
   const [isBanner, setIsBanner] = useState(false);
 
   let width = window.innerWidth;
@@ -20,7 +21,9 @@ export default function Banner({ image, title, description, button }) {
         <div className="banner-grid-item-1 banner-content-container">
           <p className="banner-title">{title}</p>
           <span>{description}</span>
-          <button className="banner-btn font-semibold">{button}</button>
+          <Link to={to}>
+            <button className="banner-btn font-semibold">{button}</button>
+          </Link>
         </div>
       </div>
       <div

@@ -15,6 +15,7 @@ export default function BannerContainer({ number }) {
           title={banner[number].title}
           description={banner[number].description}
           button={banner[number].button}
+          to={banner[number].to}
         />
       </div>
     </>
