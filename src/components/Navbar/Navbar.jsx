@@ -8,6 +8,7 @@ import NavItem from "./NavItem";
 import useSideNavbar from "../../hooks/use-sideNavbar";
 import { useState } from "react";
 import Cart from "./Cart";
+import useCart from "../../hooks/use-cart";
 
 export default function Navbar() {
   const { displaySideNavbar, setDisplaySideNavbar } = useSideNavbar();
@@ -28,6 +29,8 @@ export default function Navbar() {
   //   </Cart>
   // );
 
+  const { cart } = useCart();
+
   return (
     <div className="navbar shadow">
       <div className="flex flex-row items-center justify-between">
@@ -45,9 +48,14 @@ export default function Navbar() {
           </NavItem>
           <div
             onClick={handleClick}
-            className="cursor-pointer larger-nav-items"
+            className="cursor-pointer relative larger-nav-items"
             to="/cart"
           >
+            {cart.length > 0 && (
+              <div className="cart-items-counter rounded-full absolute bg-red-500 flex justify-center items-center text-white text-sm">
+                {cart.length}
+              </div>
+            )}
             <FaShoppingCart />
           </div>
           <div
