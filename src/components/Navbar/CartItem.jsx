@@ -24,6 +24,9 @@ export default function CartItem({ id, image, name, price, quantity }) {
   };
 
   const decreaseQuantity = () => {
+    if (quantity === 1) {
+      return;
+    }
     const newCart = cart.map((item) => {
       if (item.productId === id) {
         return {
