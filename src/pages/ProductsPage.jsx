@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 import Trending from "../components/Trending/Trending";
+import useCart from "../hooks/use-cart";
 import useProducts from "../hooks/use-products";
 import "./ProductPage.css";
 
 export default function ProductsPage() {
+  const { cart, setCart } = useCart();
   const { id } = useParams();
   const { products } = useProducts();
   const product = products.filter((product) => product.id === parseInt(id))[0];
@@ -39,6 +41,33 @@ export default function ProductsPage() {
   function handleQuantityDecrease() {
     if (quantity === 1) return;
     setQuantity(quantity - 1);
+  }
+
+  function addToCart() {
+    const item = {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      image: product.image,
+    };
+
+    //check if item already exists in cart, if yes, increase quantity
+    const itemExists = cart.filter((item) => item.productId === product.id)[0];
+    if (itemExists) {
+      const newCart = cart.map((item) => {
+        if (item.productId === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity + quantity,
+          };
+        }
+        return item;
+      });
+      setCart(newCart);
+      return;
+    }
+    setCart((prev) => [...prev, item]);
   }
 
   return (
@@ -102,7 +131,9 @@ export default function ProductsPage() {
                 <div className="quantity-price">₹{price * quantity}</div>
               </div>
               <div className="product-buy-btn-container">
-                <button className="add-to-cart-btn">ADD TO CART</button>
+                <button onClick={addToCart} className="add-to-cart-btn">
+                  ADD TO CART
+                </button>
                 <button className="buy-now-btn">BUY NOW</button>
               </div>
             </div>

@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import CategoriesPage from "./pages/CategoriesPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
-import CartPage from "./pages/CartPage";
 import SideNavbar from "./components/Navbar/SideNavbar";
+import Footer from "./components/Footer/Footer";
+import CategorisedProducts from "./components/CategoriedProducts/CategorisedProducts";
 import { SideNavbarProvider } from "./contexts/SideNavbarContext";
 import { ProductsProvider } from "./contexts/ProductsContext";
 import { BannerContextProvider } from "./contexts/BannerContext";
-import Footer from "./components/Footer/Footer";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
-import CategorisedProducts from "./components/CategoriedProducts/CategorisedProducts";
+import { CartContextProvider } from "./contexts/CartContext";
+import "./App.css";
 
 function App() {
   const changeMode = () => {
@@ -23,27 +23,32 @@ function App() {
   return (
     <>
       <SideNavbarProvider>
-        <Navbar />
-        <SideNavbar />
+        <ProductsProvider>
+          <BannerContextProvider>
+            <CategoryContextProvider>
+              <CartContextProvider>
+                <>
+                  <>
+                    <Navbar />
+                    <SideNavbar />
+                  </>
+                  <div className="main">
+                    <Routes>
+                      <Route index element={<HomePage />} />
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/categories" element={<CategoriesPage />}>
+                        <Route index element={<CategorisedProducts />} />
+                        <Route path=":id" element={<CategorisedProducts />} />
+                      </Route>
+                      <Route path="/product/:id" element={<ProductsPage />} />
+                    </Routes>
+                  </div>
+                </>
+              </CartContextProvider>
+            </CategoryContextProvider>
+          </BannerContextProvider>
+        </ProductsProvider>
       </SideNavbarProvider>
-      <ProductsProvider>
-        <BannerContextProvider>
-          <CategoryContextProvider>
-            <div className="main">
-              <Routes>
-                <Route index element={<HomePage />} />
-                <Route path="/" element={<HomePage />} />
-                <Route path="/categories" element={<CategoriesPage />}>
-                  <Route index element={<CategorisedProducts />} />
-                  <Route path=":id" element={<CategorisedProducts />} />
-                </Route>
-                <Route path="/product/:id" element={<ProductsPage />} />
-                <Route path="/cart" element={<CartPage />} />
-              </Routes>
-            </div>
-          </CategoryContextProvider>
-        </BannerContextProvider>
-      </ProductsProvider>
       <Footer />
     </>
   );

@@ -8,8 +8,6 @@ export default function MostSoldProducts() {
 
   const mostPopular = products.filter((product) => product.isMostPopular);
 
-  console.log(mostPopular);
-
   const mostPopularProducts = mostPopular.map((product) => (
     <ProductCard
       classname="most-sold-product"
