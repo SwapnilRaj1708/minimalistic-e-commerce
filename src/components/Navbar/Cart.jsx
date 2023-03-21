@@ -73,14 +73,19 @@ export default function Cart({ handleClose }) {
         <div className="empty-cart-heading font-bold text-xl mt-8 mb-6">
           Your cart is empty
         </div>
-        <button onClick={handleClose} className="keep-browsing-btn">Keep Browsing</button>
+        <button onClick={handleClose} className="keep-browsing-btn">
+          Keep Browsing
+        </button>
       </div>
     </div>
   );
 
   return ReactDOM.createPortal(
     <>
-      <div onClick={handleClose} className="cart-bg fixed z-20 inset-0 opacity-80"></div>
+      <div
+        onClick={handleClose}
+        className="cart-bg fixed z-20 inset-0 opacity-80"
+      ></div>
       <div
         style={{ marginRight: cartMargin }}
         className="cart z-20 fixed flex flex-col justify-between bg-white"
@@ -93,7 +98,11 @@ export default function Cart({ handleClose }) {
             <RxCross1 />
           </button>
         </div>
-        <div className="shopping-cart border my-2 flex flex-col w-full h-full">
+        <div
+          className={`shopping-cart ${
+            cart.length > 0 ? "border" : ""
+          } my-2 flex flex-col w-full h-full`}
+        >
           {isCartEmpty ? emptyCart : renderedCartItem}
         </div>
         <div className="subtotal-container flex flex-row justify-between w-full">
