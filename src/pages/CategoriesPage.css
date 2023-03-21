@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 768px) {
   .category-chips-container {
-    justify-content: start;
+    justify-content: flex-start;
     overflow-x: scroll;
   }
 }
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 768px) {
   .category-chips-container {
-    justify-content: start;
+    justify-content: flex-start;
     overflow-x: scroll;
   }
 }

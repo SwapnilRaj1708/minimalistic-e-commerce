@@ -2,7 +2,7 @@
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1rem;
@@ -11,7 +11,7 @@
 }
 .trending-product {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
